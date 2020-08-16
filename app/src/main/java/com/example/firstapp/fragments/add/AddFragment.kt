@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.fragment_add.view.*
 
 class AddFragment : Fragment() {
 
-    private lateinit var mUserViewModel: ViewModel
+     lateinit var mUserViewModel: ViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -37,9 +37,9 @@ class AddFragment : Fragment() {
 
         if(inputCheck(firstName, Phone)){
             // Create User Object
-            val user = list(0, firstName, Integer.parseInt(Phone.toString()))
+            val List = list(0, firstName, Integer.parseInt(Phone.toString()))
             // Add Data to Database
-            mUserViewModel.addUser(user)
+            mUserViewModel.addUser(List)
             Toast.makeText(requireContext(), "Successfully added!", Toast.LENGTH_LONG).show()
             // Navigate Back
             findNavController().navigate(R.id.action_addFragment_to_listFragment)
