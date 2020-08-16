@@ -6,7 +6,7 @@ import androidx.room.*
 @Dao
 interface listdataDAO {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun addUser(user:list)
+    suspend fun addUser(List:list)
 
     @Query("SELECT * from listname_table ORDER BY id ASC")
     fun readAllData() : LiveData<List<list>>

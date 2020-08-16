@@ -10,8 +10,10 @@ import com.example.firstapp.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
 
+    private lateinit var drawerLayout: DrawerLayout
+    
+    override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         @Suppress("UNUSED_VARIABLE")
@@ -30,6 +32,4 @@ class MainActivity : AppCompatActivity() {
         val navController = this.findNavController(R.id.myNavHostFragment)
         return NavigationUI.navigateUp(navController, drawerLayout)
     }
-
-    private lateinit var drawerLayout: DrawerLayout
 }

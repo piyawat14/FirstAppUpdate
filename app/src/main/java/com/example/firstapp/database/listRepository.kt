@@ -6,7 +6,7 @@ class listRepository (private val ListdataDAO: listdataDAO){
 
     val readAllData: LiveData<List<list>> = ListdataDAO.readAllData()
 
-    suspend fun addUser(user:list){
-        ListdataDAO.addUser(user)
+    suspend fun addUser(List:list){
+        ListdataDAO.addUser(List)
     }
 }
